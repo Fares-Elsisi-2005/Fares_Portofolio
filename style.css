@@ -61,6 +61,11 @@ header{
     align-items: center;
     
 }
+@media(max-width:767px){
+    .main{
+        min-height: 500px;
+    }
+}
 
 .main h2{
     color: #fff;
@@ -209,8 +214,36 @@ padding: 30px;
 .Projects{
     background-color: #01625a;
 }
-.Projects content{
+.Projects .content{
     margin-top: 30px;
+    height: 90vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ffffff69;
+}
+
+
+
+@media(max-width:767px){
+    .Projects .content{
+        height: 580px;
+    }
+}
+@media(pointer: fine){
+.Projects .content::-webkit-scrollbar{
+    width: 15px;
+}
+.Projects .content::-webkit-scrollbar-track{
+
+    background-color: #f1f5f961;
+   
+}
+.Projects .content::-webkit-scrollbar-thumb{
+    background-color:#298ad130;
+}
+.Projects .content::-webkit-scrollbar-thumb:hover{
+    background-color:#298bd15a ;
+}
 }
 
 /* Filter buttons */
