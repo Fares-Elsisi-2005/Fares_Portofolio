@@ -282,6 +282,7 @@ padding: 30px;
     background-color: #0402021a;
     border:1px solid #fff;
     min-height: 14em;
+    max-height: fit-content;
     width: 23em;
     overflow: hidden;
     border-radius: 10px;
