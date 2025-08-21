@@ -41,25 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const formStatus = document.getElementById('formStatus');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            
+
             // Basic validation
             if (!name || !email || !message) {
                 showFormStatus('Please fill out all fields.', 'error');
                 return;
             }
-            
+
             if (!isValidEmail(email)) {
                 showFormStatus('Please enter a valid email address.', 'error');
                 return;
             }
-            
+
             // Simulate form submission (in a real scenario, you'd send data to a server)
             // This is just a frontend demo with no actual backend processing
             setTimeout(() => {
@@ -80,28 +80,27 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.textContent = message;
         formStatus.className = 'form-status';
         formStatus.classList.add(type);
-        
+
         // Auto-hide message after 5 seconds
         setTimeout(() => {
             formStatus.style.display = 'none';
         }, 5000);
-        
+
         formStatus.style.display = 'block';
     }
 });
 
 
- 
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     emailjs.sendForm('service_tp3amgs', 'template_qu2vkw7', this)
-      .then(function() {
-        alert("✅ Message sent successfully!");
-        document.getElementById("contactForm").reset();
-      }, function(error) {
-        console.log(error);
-        alert("❌ Failed to send message. Try again later.");
-      });
-  });
- 
+        .then(function () {
+            alert("✅ Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        }, function (error) {
+            console.log(error);
+            alert("❌ Failed to send message. Try again later.");
+        });
+});
