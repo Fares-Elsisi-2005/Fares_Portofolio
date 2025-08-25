@@ -16,6 +16,7 @@ section{
 }
 
 
+
 /* ===============HEADER */
 
 header{
@@ -279,16 +280,18 @@ padding: 30px;
 }
 
 .project-card{
+
     background-color: #0402021a;
     border:1px solid #fff;
-    min-height: 14em;
+    min-height: 21em;
     max-height: fit-content;
     width: 23em;
     overflow: hidden;
     border-radius: 10px;
     margin: 10px;
     transition: 0.7s;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .project-card:hover{
     transform: scale(1.1);
@@ -305,6 +308,13 @@ padding: 30px;
 
 .project-info{
     padding: 1em;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    
+     
 }
 .project-category{
     font-size: 0.8em;
